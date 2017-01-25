@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+        <title>MUSE - High School Sign-up</title>
+        
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+        
+        <!-- icons -->
+		<link href="img/favicon.ico" rel="shortcut icon">
+		<link href="img/touch.png" rel="apple-touch-icon-precomposed">
+		
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- font awesome css -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+		
+        <!-- load modernizr -->
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <!-- load jQuery from Goolge CDN -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </head>
+    <body>
+    	<header class="clear">
+        	<a href="http://www.museschool.org" class="logo left" target="_blank"><img src="img/logo.png" alt="MUSE" /></a>
+            <div class="tagline right hideMobile">
+            	<!--<span class="hideMobile">Call us at</span> <a href="tel:18188805437">+1 818.880.5437</a> -->
+                Inspiring and preparing young people to live consciously with themselves, one another, and the planet.
+            </div>
+        </header>
+        <div id="middle" class="wrapper clear all hs">
+        	<section>
+            	<h1>See Why Students Thrive at MUSE High School</h1>
+                <p>Students at MUSE High School have a choice and voice in their education. Our holistic educational approach combines solid academics with student passions and interests. MUSE High School inspires and prepares young people to live consciously with themselves, one another, and the planet.</p>
+                <p><strong>Sign up for more information or to schedule a campus tour!</strong></p>
+                <a href="javascript:void(0);" title="Sign up for an Open House!" class="showMobile button small toForm">Sign Up for More Info!</a>
+                <div class="clear">
+                    <blockquote>
+                        <i>&ldquo;</i>...MUSE PREPARES YOU FOR LIFE, NOT JUST COLLEGE.<i>&rdquo;</i>
+                        <span>-ANTONIA, 17</span>
+                    </blockquote>
+                </div>
+                <h2>The MUSE School Difference</h2>
+                <ul class="list">
+                	<li class="personal">
+                    	<h3>Personalized Learning: </h3>MUSE customizes each student's curriculum based on personal passions to maximize interest, comprehension and motivation. 
+                    </li>
+                    <li class="rigorous">
+                    	<h3>Powerful Academics: </h3>MUSE students are assessed individually and encouraged to go beyond the classroom with real-world mentors.
+                    </li>
+                    <li class="character">
+                    	<h3>Emotional Intelligence: </h3>MUSE's nurturing environment cultivates student self-efficacy, the belief in one's own ability to succeed, plus groundbreaking and highly effective communication methods.
+                    </li>
+                    <li class="sustain">
+                    	<h3>Sustainable Living: </h3>MUSE students enjoy a unique seed-to-table lunch experience prepared in MUSE's on-site kitchen. Our students learn, hands-on, to be stewards of the earth's food, energy and water resources. 
+                    </li>
+                </ul>
+            </section>
+            <div id="high" class="aside-wrap left">
+                <aside>
+                    <h2 class="light">Sign Up for More Information</h2>
+                    <h3 class="light">OR TO SCHEDULE A CAMPUS TOUR</h3>
+                    <form action="confirmation-tour.php" method="post" name="openHouse" id="openHouse" class="clear" onSubmit="return checkForm();">         	
+                        <div class="form-item clear required">
+                            <label for="fname"><span>*</span>First Name:</label>
+                            <input type="text" name="fname" id="fname" />
+                        </div><!-- end form-item -->
+                        <div class="form-item clear required">
+                            <label for="lname"><span>*</span>Last Name:</label>
+                            <input type="text" name="lname" id="lname" />
+                        </div><!-- end form-item -->
+                        <div class="form-item clear required">
+                            <label for="email"><span>*</span>Email:</label>
+                            <input type="text" name="email" id="email" />
+                        </div><!-- end form-item -->
+                        <div class="form-item clear">
+                            <label for="phone">Phone:</label>
+                            <input type="text" name="phone" id="phone" />
+                        </div><!-- end form-item -->
+                        <input type="submit" name="submit" value="Sign Up Now" />
+                            <input type="hidden" name="gclid" value="0" id="gclid" />
+                    </form>
+                </aside>
+            </div>
+        </div><!-- end wrapper -->
+        <div class="location-wrap clear">
+        	<h2>Where is MUSE School?</h2>
+            <h3>Our Highschool School campus is nestled comfortably in the Santa Monica Mountains:</h3>
+            <img src="img/maps-mid.jpg" width="100%" class="hideMobile" alt="MUSE School"/>
+            <div class="location">
+                <strong>Middle & High School campus (6<sup>th</sup> - 12<sup>th</sup> grade)</strong><br />
+                <span>4345 Las Virgenes Rd, Calabasas, CA 91302</span>
+            </div>
+        </div><!-- end location -->
+		<footer class="clear">
+        	<a href="javascript:void(0);" title="Back to top" class="toTop showMobile">Back to top</a>
+			<div class="tagline showMobile">
+                Inspiring and preparing young people to live consciously with themselves, one another, and the planet.
+            </div>
+        	<!-- Attach scripts -->   
+            <script src="js/scripts.js"></script>
+            <script src="js/jquery.outside.js"></script>     
+            <script>
+			//jQuery UI controls for Select Menu
+            $(document).ready(function () {
+				//Back to top scroller
+				$('.toTop').on('click', function(){
+					$('html, body').animate({scrollTop : 0},800);
+				});
+				
+				//Scroll to web form
+				$('.toForm').on('click', function(){
+					var offset = $('aside').offset();
+					var top = offset.top;
+					$('html, body').animate({scrollTop : top},800);
+				});
+				
+				//On click away from the Fake Select, close it
+				$('.fake-select').on('mousedownoutside', function(){
+					$(this).find('ul').slideUp();
+				});
+			});
+        	</script>
+            <script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			  ga('create', 'UA-43093739-1', 'auto');
+			  ga('send', 'pageview');
+			
+			</script>
+
+        </footer><!-- end footer -->
+    </body>
+</html>
